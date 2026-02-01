@@ -1,39 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <head>
-    <link rel="icon" type="image/png" href="assets/logo.png">
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <img src="assets/logo.png" alt="SK Enterprise Logo" class="logo-img">
-            <h1>SK Enterprise</h1>
-        </div>
-    </header>
-    </body>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SK Enterprise</title>
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
 <body>
 
-    <header>
-        <h1>SK Enterprise</h1>
-    </header>
+    <section id="screen-login" class="app-screen">
+        <div class="auth-container">
+            <img src="assets/logo.png" alt="Logo" class="auth-logo">
+            <h2 class="auth-title">SK Enterprise</h2>
+            <div class="auth-card">
+                <h3 class="blue-text">WELCOME BACK</h3>
+                <p class="auth-subtitle">Sign in with your account</p>
+                <div class="input-group">
+                    <label>✉️ Email Address</label>
+                    <input type="email" id="login-email" placeholder="Enter your email address">
+                </div>
+                <div class="input-group">
+                    <label>🔒 Password</label>
+                    <input type="password" id="login-pass" placeholder="Enter your password">
+                </div>
+                <button class="btn-auth" onclick="showScreen('screen-home')">Sign In</button>
+                <div class="auth-footer">
+                    Don't have an account? <a href="#" onclick="showScreen('screen-signup')">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <main id="product-list">
-        <p>Loading products...</p>
-    </main>
+    <section id="screen-signup" class="app-screen" style="display:none;">
+        <div class="auth-container">
+            <img src="assets/logo.png" alt="Logo" class="auth-logo">
+            <h2 class="auth-title">SK ENTERPRISE</h2>
+            <div class="auth-card">
+                <h3 class="blue-text">CREATE NEW ACCOUNT</h3>
+                <p class="auth-subtitle">Create your new account</p>
+                <div class="input-group">
+                    <label>✉️ Email Address</label>
+                    <input type="email" placeholder="Enter your email address">
+                </div>
+                <div class="input-group">
+                    <label>🔒 Password</label>
+                    <input type="password" placeholder="Enter your password">
+                </div>
+                <button class="btn-auth" onclick="showScreen('screen-home')">Create Account</button>
+                <div class="auth-footer">
+                    Already have an account? <a href="#" onclick="showScreen('screen-login')">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>© 2024 SK Enterprise</p>
-        <small id="admin-trigger" style="color: #ccc; cursor: pointer;">v1.0.0</small>
-    </footer>
+    <section id="screen-home" class="app-screen" style="display:none;">
+        <header>
+            <div class="header-content">
+                <img src="assets/logo.png" alt="Logo" class="logo-img">
+                <h1>SK ENTERPRISE</h1>
+            </div>
+        </header>
+        <main id="product-list">
+            </main>
+        <footer>
+            <small id="admin-trigger">v1.5.0</small>
+        </footer>
+    </section>
 
     <script src="js/app.js"></script>
 </body>
