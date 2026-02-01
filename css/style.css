@@ -28,8 +28,17 @@ body {
 .app-screen {
     width: 100%;
     min-height: 100vh;
+    position: absolute; /* This pulls them out of the normal stack */
+    top: 0;
+    left: 0;
+    background-color: white; /* Prevents seeing the home screen behind it */
+    z-index: 1;
 }
 
+/* If a screen is active, bring it to the front */
+.app-screen[style*="display: block"] {
+    z-index: 10;
+}
 .blue-text {
     color: #3498db;
     margin-top: 0;
