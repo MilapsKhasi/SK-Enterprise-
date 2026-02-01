@@ -90,6 +90,70 @@ header {
     letter-spacing: 1px;
 }
 
+/* --- Input Group Styling --- */
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.input-group label {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #202124;
+    gap: 8px; /* Space between icon and text */
+}
+
+/* --- The Input Box --- */
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0; /* Light gray border like screenshot */
+    border-radius: 12px;       /* Slightly more rounded */
+    font-size: 0.95rem;
+    color: #202124;
+    background-color: #fafafa; /* Very light gray background */
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Focus effect when user clicks in the box */
+.input-group input:focus {
+    border-color: #3498db;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* --- Placeholder Styling --- */
+.input-group input::placeholder {
+    color: #9aa0a6;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* --- Auth Button Refinement --- */
+.btn-auth {
+    width: 100%;
+    padding: 16px;
+    background: #3498db; 
+    color: white;
+    border: none;
+    border-radius: 30px; /* Capsule shape like your screenshot */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-auth:active {
+    transform: scale(0.97); /* "Pressed" feel on mobile */
+    background: #2980b9;
+}
+
 header h1 {
     margin: 0;
     font-size: 1.2rem;
