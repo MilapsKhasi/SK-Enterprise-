@@ -1,14 +1,18 @@
 function showScreen(screenId) {
-    // Hide all screens
-    document.querySelectorAll('.app-screen').forEach(screen => {
+    // 1. Hide EVERY section with the class 'app-screen'
+    const allScreens = document.querySelectorAll('.app-screen');
+    allScreens.forEach(screen => {
         screen.style.display = 'none';
     });
-    // Show the requested screen
-    document.getElementById(screenId).style.display = 'block';
-    
-    // If going home, load products
-    if(screenId === 'screen-home') {
-        loadProducts();
+
+    // 2. Show only the one we want
+    const target = document.getElementById(screenId);
+    if (target) {
+        target.style.display = 'block';
+        // 3. Force scroll to top so the new screen starts at the header
+        window.scrollTo(0, 0);
+    } else {
+        console.error("Screen ID not found:", screenId);
     }
 }
 
