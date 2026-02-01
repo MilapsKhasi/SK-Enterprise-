@@ -41,7 +41,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;       /* Reduced padding for more screen space */
+    margin-top: 5vh;     /* Pushes it down slightly from the very top */
 }
 
 .auth-card {
