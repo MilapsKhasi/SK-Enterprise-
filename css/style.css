@@ -24,6 +24,37 @@ body {
     line-height: 1.6;
 }
 
+/* Screen Management */
+.app-screen {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.blue-text {
+    color: #3498db;
+    margin-top: 0;
+}
+
+/* Copy your Auth Styles here as well */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border: 1px solid #d1d9e6;
+    border-radius: 30px;
+    text-align: center;
+    background: white;
+}
+/* ... include the btn-auth and input-group styles from previous chat ... */
+
 /* --- Header Branding --- */
 header {
     background-color: #ffffff; /* Clean white background to make logo pop */
