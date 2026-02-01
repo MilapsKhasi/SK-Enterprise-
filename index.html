@@ -3,41 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK Enterprise</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>SK Enterprise | A Name You Can Trust</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <section id="screen-login" class="app-screen">
+    <section id="screen-login" class="app-screen auth-page">
         <div class="auth-container">
-            <img src="assets/logo.png" alt="Logo" class="auth-logo">
-            <h2 class="auth-title">SK Enterprise</h2>
+            <img src="logo.png" alt="SK Logo" class="auth-logo">
+            <h2 class="auth-brand">SK ENTERPRISE</h2>
             <div class="auth-card">
-                <h3 class="blue-text">WELCOME BACK</h3>
-                <p class="auth-subtitle">Sign in with your account</p>
+                <h3 class="auth-heading">WELCOME BACK</h3>
+                <p class="auth-subheading">Sign in with your account</p>
                 <div class="input-group">
                     <label>✉️ Email Address</label>
-                    <input type="email" id="login-email" placeholder="Enter your email address">
+                    <input type="email" placeholder="Enter your email address">
                 </div>
                 <div class="input-group">
                     <label>🔒 Password</label>
-                    <input type="password" id="login-pass" placeholder="Enter your password">
+                    <input type="password" placeholder="Enter your password">
                 </div>
                 <button class="btn-auth" onclick="showScreen('screen-home')">Sign In</button>
-                <div class="auth-footer">
-                    Don't have an account? <a href="#" onclick="showScreen('screen-signup')">Sign up</a>
-                </div>
+                <p class="auth-footer">Don't have an account? <a href="#" onclick="showScreen('screen-signup')">Sign up</a></p>
             </div>
         </div>
     </section>
 
-    <section id="screen-signup" class="app-screen" style="display:none;">
+    <section id="screen-signup" class="app-screen auth-page" style="display:none;">
         <div class="auth-container">
-            <img src="assets/logo.png" alt="Logo" class="auth-logo">
-            <h2 class="auth-title">SK ENTERPRISE</h2>
+            <img src="logo.png" alt="SK Logo" class="auth-logo">
+            <h2 class="auth-brand">SK ENTERPRISE</h2>
             <div class="auth-card">
-                <h3 class="blue-text">CREATE NEW ACCOUNT</h3>
-                <p class="auth-subtitle">Create your new account</p>
+                <h3 class="auth-heading">CREATE NEW ACCOUNT</h3>
+                <p class="auth-subheading">Create your new account</p>
                 <div class="input-group">
                     <label>✉️ Email Address</label>
                     <input type="email" placeholder="Enter your email address">
@@ -47,219 +45,123 @@
                     <input type="password" placeholder="Enter your password">
                 </div>
                 <button class="btn-auth" onclick="showScreen('screen-home')">Create Account</button>
-                <div class="auth-footer">
-                    Already have an account? <a href="#" onclick="showScreen('screen-login')">Sign in</a>
+                <p class="auth-footer">Already have an account? <a href="#" onclick="showScreen('screen-login')">Sign in</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="screen-home" class="app-screen" style="display:none;">
+        <header class="app-bar">
+            <div class="bar-left">
+                <img src="logo.png" class="bar-logo">
+                <span>SK ENTERPRISE</span>
+            </div>
+            <button class="menu-trigger">☰</button>
+        </header>
+
+        <div class="banner-featured">
+            <div class="banner-content">
+                <h2>CHEMICAL PRODUCTS</h2>
+                <p>TOTAL 6 CHEMICAL PRODUCTS ADDED</p>
+                <button class="banner-btn">VIEW ALL</button>
+            </div>
+            <div class="banner-gradient-mock"></div>
+        </div>
+
+        <h3 class="section-label">Quick Access</h3>
+        <div class="quick-access-grid">
+            <div class="qa-item" onclick="showScreen('screen-categories')">
+                <div class="qa-icon-box">📂</div>
+                <span>Categories</span>
+            </div>
+            <div class="qa-item">
+                <div class="qa-icon-box">🕒</div>
+                <span>Updates</span>
+            </div>
+            <div class="qa-item">
+                <div class="qa-icon-box">🏛️</div>
+                <span>Bank Details</span>
+            </div>
+            <div class="qa-item">
+                <div class="qa-icon-box">🛒</div>
+                <span>Cart</span>
+            </div>
+            <div class="qa-item">
+                <div class="qa-icon-box">▶️</div>
+                <span>Videos</span>
+            </div>
+        </div>
+
+        <h3 class="section-label">Showcase</h3>
+        <div class="showcase-container">
+            <div class="showcase-card">
+                <div class="showcase-row">
+                    <div class="item-mock"></div>
+                    <div class="item-mock"></div>
+                    <div class="more-btn">❯<br><small>More</small></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <header class="main-app-bar">
-    <div class="header-left">
-        <img src="assets/logo.png" alt="Logo" class="bar-logo">
-        <span class="brand-name">SK ENTERPRISE</span>
-    </div>
-    <button class="menu-btn">☰</button>
-</header>
-
-<main class="home-content">
-    <div class="featured-banner">
-        <div class="banner-text">
-            <h2>CHEMICAL PRODUCTS</h2>
-            <p>TOTAL 6 CHEMICAL PRODUCTS ADDED</p>
-            <button class="btn-view-all">VIEW ALL</button>
-        </div>
-        <div class="banner-img-placeholder">
-            <div class="img-box-mock"></div>
-        </div>
-    </div>
-
-<div class="section-container">
-    <h3 class="section-title">Quick Access</h3>
-    <div class="quick-access-grid">
-        
-        <div class="qa-item-container">
-            <div class="qa-box" onclick="showScreen('screen-categories')">
-                <span class="qa-icon">📂</span>
-            </div>
-            <p class="qa-label">Categories</p>
-        </div>
-
-        <div class="qa-item-container">
-            <div class="qa-box" onclick="showScreen('screen-updates')">
-                <span class="qa-icon">🕒</span>
-            </div>
-            <p class="qa-label">Updates</p>
-        </div>
-
-        <div class="qa-item-container">
-            <div class="qa-box" onclick="showScreen('screen-bank')">
-                <span class="qa-icon">🏛️</span>
-            </div>
-            <p class="qa-label">Bank Details</p>
-        </div>
-
-        <div class="qa-item-container">
-            <div class="qa-box" onclick="showScreen('screen-cart')">
-                <span class="qa-icon">🛒</span>
-            </div>
-            <p class="qa-label">Cart</p>
-        </div>
-
-        <div class="qa-item-container">
-            <div class="qa-box" onclick="showScreen('screen-videos')">
-                <span class="qa-icon">▶️</span>
-            </div>
-            <p class="qa-label">Videos</p>
-        </div>
-
-    </div>
-</div>
-
-    <div class="section-container">
-        <h3 class="section-title">Showcase</h3>
-        
-        <div class="showcase-card">
-            <div class="product-row">
-                <div class="product-item">
-                    <div class="img-box-mock small"></div>
-                    <p>Fire Buff</p>
-                </div>
-                <div class="product-item">
-                    <div class="img-box-mock small"></div>
-                    <p>Shine King</p>
-                </div>
-                <div class="more-link">
-                    <span class="arrow">❯</span>
-                    <p>More</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="showcase-card">
-            <div class="product-row">
-                <div class="product-item">
-                    <div class="img-box-mock small"></div>
-                    <p>Omni Black</p>
-                </div>
-                <div class="product-item">
-                    <div class="img-box-mock small"></div>
-                    <p>Nikal LCD</p>
-                </div>
-                <div class="more-link">
-                    <span class="arrow">❯</span>
-                    <p>More</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
     <section id="screen-categories" class="app-screen" style="display:none;">
-    <header class="main-app-bar">
-        <div class="header-left">
+        <header class="app-bar">
             <button class="back-btn" onclick="showScreen('screen-home')">←</button>
-            <span class="brand-name">Products</span>
-        </div>
-        <div class="header-right">
-            <button class="menu-btn">🔍</button>
-        </div>
-    </header>
-
-    <main class="categories-list">
-        <div class="category-main-card" onclick="showScreen('screen-all-products')">
-            <div class="category-text">
+            <span>Products</span>
+        </header>
+        <div class="list-container">
+            <div class="category-big-card" onclick="showScreen('screen-all-products')">
                 <h3>All Products</h3>
                 <p>13 Items</p>
             </div>
-        </div>
-
-        <div class="category-main-card" onclick="showScreen('screen-chemical-products')">
-            <div class="category-text">
+            <div class="category-big-card">
                 <h3>Chemical Products</h3>
                 <p>10 Items</p>
             </div>
         </div>
-    </main>
-</section>
+    </section>
 
     <section id="screen-all-products" class="app-screen" style="display:none;">
-    <header class="main-app-bar">
-        <div class="header-left">
+        <header class="app-bar">
             <button class="back-btn" onclick="showScreen('screen-categories')">←</button>
-            <span class="brand-name">All Products</span>
-        </div>
-        <div class="header-right">
-            <button class="menu-btn">🔍</button>
-        </div>
-    </header>
-
-    <main class="product-grid-container">
-        <div class="product-item-card" onclick="showScreen('screen-product-detail')">
-            <div class="gradient-img-box">
+            <span>All Products</span>
+        </header>
+        <div class="product-grid">
+            <div class="product-card" onclick="showScreen('screen-product-detail')">
+                <div class="product-gradient-thumb"></div>
+                <div class="product-info">
+                    <h4>Fire Buff 12x1 Ply</h4>
+                    <p>All Sizes</p>
+                    <span class="dot">.</span>
                 </div>
-            <div class="product-item-info">
-                <h4>Fire Buff</h4>
-                <p class="sub-text">All Sizes</p>
-                <span class="dot-indicator">.</span>
+            </div>
+            <div class="product-card">
+                <div class="product-gradient-thumb"></div>
+                <div class="product-info">
+                    <h4>Hard Buff</h4>
+                    <p>₹ 260.00</p>
+                    <span class="dot">.</span>
+                </div>
             </div>
         </div>
-
-        <div class="product-item-card" onclick="openProductDetail('Hard Buff', '260.00', '')">
-            <div class="gradient-img-box"></div>
-            <div class="product-item-info">
-                <h4>Hard Buff With Var...</h4>
-                <p class="sub-text">₹ 260.00</p>
-                <span class="dot-indicator">.</span>
-            </div>
-        </div>
-
-        <div class="product-item-card">
-            <div class="gradient-img-box"></div>
-            <div class="product-item-info">
-                <h4>Pimco Met Wheel 8...</h4>
-                <p class="sub-text">₹ 620.00</p>
-                <span class="dot-indicator">.</span>
-            </div>
-        </div>
-
-        <div class="product-item-card">
-            <div class="gradient-img-box"></div>
-            <div class="product-item-info">
-                <h4>Gold Finisher Luster</h4>
-                <p class="sub-text">₹ 200.00</p>
-                <span class="dot-indicator">.</span>
-            </div>
-        </div>
-    </main>
-</section>
+    </section>
 
     <section id="screen-product-detail" class="app-screen" style="display:none;">
-    <header class="main-app-bar">
-        <div class="header-left">
+        <header class="app-bar">
             <button class="back-btn" onclick="showScreen('screen-all-products')">←</button>
-            <span class="brand-name">Product Details</span>
-        </div>
-    </header>
-
-    <main class="detail-container">
-        <div class="detail-image-box">
-            <div class="gradient-img-box large">
-                </div>
-        </div>
-
-        <div class="detail-text-content">
-            <h2 class="detail-title">Fire Buff 12x1 Ply</h2>
+            <span>Product Details</span>
+        </header>
+        <div class="detail-view">
+            <div class="detail-gradient-hero"></div>
+            <h2 class="detail-name">Fire Buff 12x1 Ply</h2>
             <p class="detail-price">220.00</p>
+            <div class="detail-footer">
+                <button class="btn-outline">Add to Cart</button>
+                <button class="btn-filled">Call to Order</button>
+            </div>
         </div>
+    </section>
 
-        <div class="detail-actions">
-            <button class="btn-secondary">Add to Cart</button>
-            <button class="btn-primary">Call to Order</button>
-        </div>
-    </main>
-</section>
-    
-    <script src="js/app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
