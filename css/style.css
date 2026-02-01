@@ -1,11 +1,11 @@
 /* --- Global Variables --- */
 :root {
-    --primary-color: #1a73e8;    /* Professional Blue */
-    --secondary-color: #202124;  /* Dark Gray/Black */
-    --bg-color: #f8f9fa;         /* Light Background */
+    --primary-color: #1a73e8;    
+    --secondary-color: #202124;  
+    --bg-color: #f8f9fa;         
     --card-bg: #ffffff;
     --text-main: #3c4043;
-    --accent-color: #34a853;     /* Success/Call Green */
+    --accent-color: #34a853;    
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -41,8 +41,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;       /* Reduced padding for more screen space */
-    margin-top: 5vh;     /* Pushes it down slightly from the very top */
+    padding: 10px;      
+    margin-top: 5vh;    
 }
 
 .auth-card {
@@ -58,7 +58,7 @@ body {
 
 /* --- Header Branding --- */
 header {
-    background-color: #ffffff; /* Clean white background to make logo pop */
+    background-color: #ffffff; 
     color: #202124;
     padding: 10px 1rem;
     position: sticky;
