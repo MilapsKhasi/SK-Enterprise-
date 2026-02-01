@@ -1,3 +1,17 @@
+function showScreen(screenId) {
+    // Hide all screens
+    document.querySelectorAll('.app-screen').forEach(screen => {
+        screen.style.display = 'none';
+    });
+    // Show the requested screen
+    document.getElementById(screenId).style.display = 'block';
+    
+    // If going home, load products
+    if(screenId === 'screen-home') {
+        loadProducts();
+    }
+}
+
 // Configuration
 const ADMIN_PASSWORD = "your_secret_password"; // Change this!
 let isAdmin = false;
