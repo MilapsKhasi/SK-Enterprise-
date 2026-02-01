@@ -589,3 +589,72 @@ footer {
     font-size: 1.2rem;
     line-height: 1;
 }
+
+/* --- Product Detail Styling --- */
+.detail-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px); /* Fill screen minus header */
+}
+
+.detail-image-box {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.gradient-img-box.large {
+    border-radius: 20px;
+    aspect-ratio: 1 / 1;
+}
+
+.detail-text-content {
+    flex-grow: 1; /* Pushes buttons to the bottom */
+}
+
+.detail-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #202124;
+    margin-bottom: 10px;
+}
+
+.detail-price {
+    font-size: 1.2rem;
+    color: #5f6368;
+    margin: 0;
+}
+
+/* --- Sticky Bottom Buttons --- */
+.detail-actions {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.detail-actions button {
+    flex: 1;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.1s;
+}
+
+.btn-secondary {
+    background: white;
+    color: #3f51b5;
+    border: 1px solid #dadce0 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.btn-primary {
+    background: #3f51b5; /* Matching your header blue */
+    color: white;
+}
+
+.detail-actions button:active {
+    transform: scale(0.96);
+}
