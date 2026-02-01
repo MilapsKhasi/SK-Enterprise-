@@ -24,6 +24,37 @@ body {
     line-height: 1.6;
 }
 
+/* --- Header Branding --- */
+header {
+    background-color: #ffffff; /* Clean white background to make logo pop */
+    color: #202124;
+    padding: 10px 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 40px; /* Adjust based on your preference */
+    width: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #1a4a9e; /* Using the dark blue from your logo */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
 /* --- Layout --- */
 header {
     background-color: var(--secondary-color);
